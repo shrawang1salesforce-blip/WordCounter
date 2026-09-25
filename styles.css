@@ -38,7 +38,6 @@ body::before {
 }
 
 .topbar,
-.page-footer,
 .counter-heading,
 .counter-footer {
   display: flex;
@@ -62,17 +61,11 @@ body::before {
   color: var(--coral);
 }
 
-.tagline,
-.page-footer,
 .counter-footer,
 .stat-note {
   color: var(--muted);
   font-size: 12px;
   letter-spacing: .03em;
-}
-
-.tagline {
-  margin: 0;
 }
 
 .intro {
@@ -95,14 +88,6 @@ h1 {
   color: var(--navy);
   font: 400 clamp(42px, 7vw, 76px)/.98 Georgia, serif;
   letter-spacing: -.055em;
-}
-
-.intro-copy {
-  max-width: 500px;
-  margin: 24px 0 0;
-  color: #526473;
-  font-size: 17px;
-  line-height: 1.6;
 }
 
 .counter {
@@ -203,28 +188,14 @@ textarea::placeholder {
   letter-spacing: 0;
 }
 
-.page-footer {
-  margin-top: 78px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-}
-
 @media (max-width: 620px) {
   .page-shell {
     width: min(100% - 28px, 980px);
     padding-top: 18px;
   }
 
-  .tagline {
-    display: none;
-  }
-
   .intro {
     padding: 58px 0 32px;
-  }
-
-  .intro-copy {
-    font-size: 16px;
   }
 
   .counter {
@@ -253,10 +224,4 @@ textarea::placeholder {
     font-size: 40px;
   }
 
-  .page-footer {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 50px;
-  }
 }

@@ -1,10 +1,10 @@
-const textArea = document.querySelector('#writing-area');
-const wordCount = document.querySelector('#word-count');
-const characterCount = document.querySelector('#character-count');
-const sentenceCount = document.querySelector('#sentence-count');
-const readingTime = document.querySelector('#reading-time');
-const characterLimit = document.querySelector('#character-limit');
-const clearButton = document.querySelector('#clear-button');
+const textArea = document.querySelector("#writing-area");
+const wordCount = document.querySelector("#word-count");
+const characterCount = document.querySelector("#character-count");
+const sentenceCount = document.querySelector("#sentence-count");
+const readingTime = document.querySelector("#reading-time");
+const characterLimit = document.querySelector("#character-limit");
+const clearButton = document.querySelector("#clear-button");
 
 function countWords(text) {
   const trimmedText = text.trim();
@@ -27,13 +27,15 @@ function updateCounts() {
   characterCount.textContent = characters.toLocaleString();
   sentenceCount.textContent = sentences.toLocaleString();
   characterLimit.textContent = `${characters.toLocaleString()} / 10,000 characters`;
-  readingTime.textContent = words ? `${minutes} min read` : 'Ready when you are';
+  readingTime.textContent = words
+    ? `${minutes} min read`
+    : "Ready when you are";
 }
 
-textArea.addEventListener('input', updateCounts);
+textArea.addEventListener("input", updateCounts);
 
-clearButton.addEventListener('click', () => {
-  textArea.value = '';
+clearButton.addEventListener("click", () => {
+  textArea.value = "";
   updateCounts();
   textArea.focus();
 });
