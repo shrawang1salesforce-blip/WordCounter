@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Word Counter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./">word<span>counter</span></a>
+      <p class="tagline">A quiet place for your words.</p>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Writing desk / 01</p>
+      <h1 id="page-title">Count what you mean.</h1>
+      <p class="intro-copy">Paste a draft, find your rhythm, and keep an eye on the details as you write.</p>
+    </section>
+
+    <section class="counter" aria-label="Text counter">
+      <div class="counter-heading">
+        <label for="writing-area">Your text</label>
+        <button class="clear-button" id="clear-button" type="button">Clear</button>
+      </div>
+      <textarea id="writing-area" spellcheck="true" autofocus placeholder="Start writing here..."></textarea>
+      <div class="counter-footer">
+        <span id="reading-time">Ready when you are</span>
+        <span id="character-limit">0 / 10,000 characters</span>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Writing statistics">
+      <article class="stat-card stat-card--accent">
+        <p class="stat-label">Words</p>
+        <p class="stat-value" id="word-count">0</p>
+        <p class="stat-note">Your working total</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Characters</p>
+        <p class="stat-value" id="character-count">0</p>
+        <p class="stat-note">Including spaces</p>
+      </article>
+      <article class="stat-card">
+        <p class="stat-label">Sentences</p>
+        <p class="stat-value" id="sentence-count">0</p>
+        <p class="stat-note">Ending in . ! or ?</p>
+      </article>
+    </section>
+
+    <footer class="page-footer">
+      <span>Made for the first draft.</span>
+      <span>All counting happens in your browser.</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
